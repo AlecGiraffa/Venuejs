@@ -1,0 +1,89 @@
+<div class="row">
+<div class="col-sm-9 col-xs-8"><!-- /leftDiv -->
+    <div class="row div-booking-img">
+        <img src="../style/images/booking_1.png" />
+        <img src="../style/images/booking_2.png" />
+        <img src="../style/images/booking_3.png" />
+    </div>
+
+    <div class="row div-hd div-bd">
+        <div class="col-sm-2 spt">
+            <span class="glyphicon glyphicon-th-large iconDesign"></span> Sports 
+        </div>
+        <div class="col-sm-10 spt-list">
+            <a href="#/cat_id=1" class="on">Badminton</a>
+            <a href="#/cat_id=2">Basketball</a>
+            <a href="#/cat_id=3">Golf</a>
+            <a href="#/cat_id=4">Snooker</a>
+            <a href="#/cat_id=5">Soccer</a>
+            <a href="#/cat_id=6">Squash</a>
+            <a href="#/cat_id=7">Tennis</a>
+        </div>
+    </div>
+
+    <div class="row div-bd">
+        <div class="col-sm-2 spt">
+            <span class="glyphicon glyphicon-map-marker iconDesign"></span> Cities 
+        </div>
+        <div class="col-sm-10 spt-list">
+            <a href="#/cat_id=1">All</a>
+            <a href="#/cat_id=1&region_id=693#region">Campbell</a>
+            <a href="#/cat_id=1&region_id=696#region">Cupertino</a>
+            <a href="#/cat_id=1&region_id=697#region">Milpitas</a>
+            <a href="#/cat_id=1&region_id=698#region">Mountain view</a>
+            <a href="#/cat_id=1&region_id=699#region">Santa Clara</a>
+            <a href="#/cat_id=1&region_id=700#region">San Jose</a>
+            <a href="#/cat_id=1&region_id=701#region">Saratoga</a> 
+            <a href="#/cat_id=1&region_id=701#region">Sunnyvale</a> 
+        </div>
+    </div>
+
+    <div ng-repeat="venue in venueList | startFrom:currentPage*pageSize | limitTo:pageSize" class="row div-home-list">
+        <div class="col-sm-3"><img class="img-home-list" ng-src="../style/images/{{venue.imgUrl}}" />
+        </div>
+        <div class="col-sm-5">
+            <a href="#/book">
+                <strong>{{venue.vName}}</strong>
+            </a><br /><br />
+            <span class="glyphicon glyphicon-star-empty"></span>
+            <span class="glyphicon glyphicon-star-empty"></span>
+            <span class="glyphicon glyphicon-star-empty"></span>
+            <span class="glyphicon glyphicon-star-empty"></span>
+            <span class="glyphicon glyphicon-star-empty"></span>
+            &nbsp;( {{venue.reviewNumber}} ) <br /><br />
+            <span>Address: {{venue.address}}</span>
+        </div>
+        <div class="col-sm-4 tr">
+            <span>Now: <span class="price-lg">{{venue.priceDisc | currency}}</span></span><br />
+            <span class="price-gray"><del>Was: {{venue.priceOrigin | currency}}</del></span><br /><br />
+            <input type="button" class="btn btn-primary" value="Book Now"></input>
+        </div>
+    </div>
+    <div class="div-list-pagenation">
+        <input type="button" class="btn btn-sm btn-primary" ng-disabled="currentPage == 0" ng-click="currentPage=0" value="First" />
+        <input type="button" class="btn btn-sm btn-primary" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1" value="Previous" /> {{currentPage+1}}/{{numberOfPages()}} 
+        <input type="button" class="btn btn-sm btn-primary" ng-disabled="currentPage >= venueList.length/pageSize - 1" ng-click="currentPage=currentPage+1" value="Next" />
+        <input type="button" class="btn btn-sm btn-primary" ng-disabled="currentPage >= venueList.length/pageSize - 1" ng-click="currentPage=numberOfPages()-1" value="Last" />
+    </div>
+</div><!-- /leftDiv -->
+
+<div class="col-sm-3 col-xs-5" style="padding: 5px 15px;"><!-- /rightDiv -->
+    <div class="div-hd div-bd">
+        <div class="div-right-hd">
+            <span>Recommendation Place</span>
+        </div>
+        <div>
+            list coming soon ...
+        </div>
+    </div>
+
+    <div class="div-hd div-bd">
+        <div class="div-right-hd">
+            <span>Exclusive Deals</span>
+        </div>
+        <div>
+            list coming soon ...
+        </div>
+    </div>
+</div><!-- /rightDiv -->
+</div><!--row-->

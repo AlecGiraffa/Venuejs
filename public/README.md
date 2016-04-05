@@ -1,0 +1,1 @@
+This is O2O platform for researching and ordering sport venues.

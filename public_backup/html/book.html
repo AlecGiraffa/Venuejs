@@ -1,0 +1,43 @@
+<!--The progress bar-->
+<div class="row" name="progressBar" style="align-content: center;">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" name="chooseVenue">Choose a venue</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" name="chooseSchedule">Choose a time schedule</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" name="checkOut">Check out</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" name="reserveDone">Reservation Done</button>
+      </div>
+    </div>
+  </div>
+</div><!--The show picture-->
+<div class="row">
+  <div class="col-sm-6">
+    <div  id="slides_control">
+        <carousel interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+              <img ng-src="{{slide.image}}">
+              <div class="carousel-caption">
+                <h4>
+                  Slide {{$index + 1}}
+                </h4>
+              </div>
+            </slide>
+        </carousel>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-8">
+    <div>Calendar</div>
+    <div ui-calendar="uiConfig.calendar" ng-model="eventSources">Calendar</div>
+
+  </div>
+</div>
+

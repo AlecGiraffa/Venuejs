@@ -1,0 +1,88 @@
+<div class="row order">
+    <div class=" col-md-2 inform">
+        <div class="pic">
+            <img   src="http://api.7yundong.cn/uploads/avatar/avatar.png">
+        </div>
+        <div>
+            <table>
+                <tr class="name">
+                    <td class="id">
+                        <h3>
+                            12345
+                        </h3>
+                    </td>
+                    <td style="font-size:20px">
+                        <span > &#9792 </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="choice"><a href="#/myorder">My Order</a></p>
+        <p class="choice"><a href="#/myvoucheer">My Voucheer</a></p>
+
+        <div class="choiced">
+            <p class="choice"><a href="#/myaccount">My Account</a></p>
+        </div>
+
+    </div>
+
+    <div class="col-md-offset-1 col-md-9" class="show" style="background-color:#E8E8E8">
+
+        <table class="table bordered striped">
+            <tr >
+                <td style="font-size:25px"> Name</td>
+                <td style="font-size:20px;padding-top:10px"> <input type="text" ng-model="user.name" placeholder="Name"> </input> </td>
+
+            </tr>
+            <tr>
+                <td style="font-size:25px"> Gender</td>
+                <td style="font-size:20px;padding-top:10px">
+                    <select ng-model="user.gender">
+                        <option value="Male" >Male</option>
+                        <option value="Female">Female</option>
+                     </select>
+                </td>
+
+            </tr>
+            <tr>
+                <td style="font-size:25px">Age</td>
+                <td style="font-size:20px;padding-top:10px"><input type="text" ng-model="user.age" placeholder="Age"> </input></td>
+
+            </tr>
+            <tr>
+                <td style="font-size:25px">Current Location</td>
+                <td style="font-size:20px;padding-top:10px"><input type="text" ng-model="user.location" placeholder="Location"> </input></td>
+
+            </tr>
+            <tr>
+                <td style="font-size:25px">Prefer Sports</td>
+                <td style="font-size:20px;padding-top:10px"> <input type="text" ng-model="user.sports" placeholder="Sports"> </input></td>
+
+            </tr>
+            <tr>
+                <td style="font-size:25px"> Password</td>
+                <td style="font-size:20px;padding-top:10px"> <input type="password" ng-model="user.password" placeholder="New Password"> </input></td>
+
+            </tr>
+            <tr>
+                <td style="font-size:25px">Contact</td>
+                <td style="font-size:20px;padding-top:10px"> <input type="text" ng-model="user.contact" placeholder="Contact"> </input></td>
+
+            </tr>
+            <tr>
+                <td style="font-size:25px">E-Mail</td>
+                <td style="font-size:20px;padding-top:10px"> <input type="text" ng-model="user.email" placeholder="Email"> </input></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="#/myaccount"> <button type="button" class="btn btn-primary btn-lg">Save</button> </a> </td>
+            </tr>
+
+        </table>
+
+
+
+    </div>
+
+</div>

@@ -1,0 +1,58 @@
+	<div class="row order">
+		<div class="col-md-2 inform">
+			<div class="pic">
+				<img   src="http://api.7yundong.cn/uploads/avatar/avatar.png">
+			</div>
+			<div>
+				<table>
+					<tr class="name">
+						<td class="id">
+							<h3>
+								12345
+							</h3>
+						</td>
+						<td style="font-size:20px">
+							<span > &#9792 </span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<p class="choice"><a href="#/myorder">My Order</a></p>
+			
+			<div class="choiced">
+			<p class="choice"><a href="#myvoucheer">My Voucheer</a></p>
+			</div>
+			<p class="choice"><a href="#/myaccount">My Account</a></p>
+		</div>
+		
+		<div class="col-md-10" class="show">
+			<div class="activate">
+				<input type="text" placeholder="Type the words you want search.">
+				<button type="button" class="btn btn-primary">Activate</button>
+			</div>
+			<table class="table bordered striped">
+				<tr >
+                    <th>Type</th>
+					<th>Discription</th>
+					<th>Price</th>
+					<th>Valid Venue</th>
+					<th>Valid Through</th>
+					<th>Status</th>
+
+
+				</tr>
+				<tr ng-repeat="voucheer in voucheers | orderBy: 'validThru' ">
+					
+					<td>{{voucheer.type}}</td>
+					<td>{{voucheer.discription}}</td>
+					<td>{{voucheer.price}}</td>
+					<td>{{voucheer.validVenue}}</td>
+					<td>{{voucheer.validThru}}</td>
+					<td>{{voucheer.status}}</td>
+				</tr>
+			</table>
+		
+		</div>
+		
+	</div>

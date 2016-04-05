@@ -1,0 +1,12 @@
+.order  {padding-top:30px;padding-bottom:30px}
+.inform {height:500px;background-color:#E8E8E8}
+.pic {text-align:center; margin: 5px auto}
+.pic img{width:132px; height:135px}
+.name {border-bottom:solid 1px white}
+.id {width:135px}
+.gender {font-size:20px}
+.choiced {background-color:#737373}
+.choice {border-bottom:solid 1px white;font-size:20px}
+.show {height:500px;background-color:white}
+.activate  {text-align:center;padding-bottom:20px}
+.activate  input{width:30%;height:35px}
